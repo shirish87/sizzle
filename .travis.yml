@@ -9,10 +9,11 @@ env:
     - secure: ot8HESvGfe2Dl719bBvRj3JjDxp3usa4Jd2QtdoBsn/4n3Fz34jQIxoWwcoVaOInoqVoEU8cmb8yBpJQ+T54Ip4kbmmYPbXtlp9HnM/+KHs10iTkYukNnOxVo4CBbXXVwez/oi0bgt+4Sg0Z9j7u+fUoan5BLELUatiA5WXRnYRG0qo1zczQJecN8trdhnvgdi+0La7q89FgWpOB1fkPpq1CW1pWwsEPN8XYqus69sgb9zZMCiS63NJaTlztWEgwpVfxdY3x8PXpUgJ/tRh4UNVy4hIXvh5p6SKFD8g6UVbA/k8IPAjliNNFTGpeOudVCDgrylvLPQGn4AXCCtz9j9XNHR3vrSyCsIAYNUwAN6e83tgHfDbwlPV/znmd8+V7EDcSInGPefTzrrwkAu7qjk9VGoqS7dovZbCLeQUoNgk7YWDtWmCQ7RvJowGwAdrEhv6XCSthxx0cwlKGQ0Or+KbeU/bTlYZo5aFHSt1C4w0I9soISlqTGdtCKlY53X/IY75rMbIdwr2TBHJXuAFTV8/F4l01nXJKKTNLxWx2Nx+yj9tvMdr8JoQz03ni65WoybbPV/9d1yu17SOMGeXPC3xH5gi35gy9Skm15iKj4DJqD3NYycT0aE9vvPlIRLW2se4tqJkfdkNAkDf/y96P9lyjzBR69CTMeYro6dAeiow=
 
 before_install:
+  - rm -rf node_modules/*
   - npm install -g npm
+  - npm --version
   - npm config set loglevel warn
 
 before_script:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
-  - rm -rf node_modules/karma
