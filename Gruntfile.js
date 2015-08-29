@@ -272,10 +272,16 @@ module.exports = function( grunt ) {
 	] : "karma:phantom" );
 
 	grunt.registerTask( "browserstack-desktop", [ "karma:desktop" ] );
-        grunt.registerTask( "browserstack-mobile", [ "karma:android", "karma:ios" ] );
+	grunt.registerTask( "browserstack-mobile", [ "karma:android", "karma:ios" ] );
 
 	grunt.registerTask( "build", [ "lint", "compile", "uglify", "dist" ] );
 	grunt.registerTask( "default", [ "build", "tests", "compare_size" ] );
-        grunt.registerTask( "browserstack", [ "build", "browserstack-desktop", "browserstack-mobile" ] );
+
+	grunt.registerTask( "browserstack", [
+		"build",
+		"browserstack-desktop",
+		"browserstack-mobile"
+	] );
+
 	grunt.registerTask( "bower", "bowercopy" );
 };
