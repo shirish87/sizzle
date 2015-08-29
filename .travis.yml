@@ -3,9 +3,9 @@ language: node_js
 node_js:
 - '0.10'
 env:
-    global:
-        - secure: "j17tHs7MhF1VuJ7ChImA0a3kd+uHPri2HJJxJ++PKCEF7pAu/cksMq9v3xQp9ZajPJJ0z4gTQnMjrzUSjhL11cpweBy84suA/vqjoh4Rp6ouV9yv/wThcij6GHd0S9MzYol6b3iR1CCauQpQwy+dff1HJvcGrcheuxD62EhVzoI="
-        - secure: "3fkfH1qCQMVFJkyyGqq79+DwOiX0/Zor4iwHr0x1fRtqNgbx3r47znBHFUDTgKpCtLrCDBlyQvbisFdoV1/0DCtE0VfhphOnyOmWuMRNIrDLLGir+dwxiqpjdflyfs2ZKuxqkAhQJJclqL2hAaHWwollejAWVuhxJ4w1E6lcjYg="
+  global:
+    - secure: ajXZOhF3V5cgNrmdb8HRFRfKQMuP5YKIYLtSrJBDEUYPDG4litsv4iaEO8vAVysnax+TfHTsgfvgdfmFXiM6Ddky55EdiUQlKv4Tzq0R7has/sC9+ncXZX1Gu4NjCU/1FeG2XRWw9JzJIgTPKBBBg5BEFCpeAJeHk0gmqvdXeszY504J8rMxEVtAFFaO4lxNUwy1CK7PNMQOYpx0qmfOScoQUxswRwEKrRf4nJAElFLWwq+D/TdZqp5GE6QaHI991EQxVToAURn/DiWQ2Tz4jdU/R5vruat79Ej+qTd7MAUH6HONxy8QNyqhV3n7EEeWKUX8mZ5zvyCcsSUhLGal+QFSpeUX3SsQ+TtCboFFwemc6O62M6O7/7Y2OgZ3CRxgYRIZie/AFvi1nMlbdgTbyvaSM72fEF/kP7hzIM6W+L6D5anUYSINI8mm1E6TTpDBxsh/2ZWB3A2KNBjce+IEk5Ouz+ISngadx0JZgWk/xOxrBHPYz2ntI7ysW6uYKddk5lhYdRkTTXGTRT/pC6nEYncIwU/0PME/3SIsPFtuBo/PnOIH8k5fGZjepOWhZemBmIBASWY9S2WiVKGoknEDlpHoL2EgUlhQF8exb3VwvLj0YnwFlYngpY+BoSzgp+MP5d3wxPSmWtXH9djyvYnzheLkYZb/ivzstmJhotmg7dY=
+    - secure: LqV3J/BiT2byUqxmK4IJSfcsmHfYwJ2zIaCHyhQ8tkshrk5+G4l4JyumEUHzC+Rj11wvSih/k7yep+HplqRefC9AOwgXktu0/X1QjlVP1doEZlpv6vtTvcijJSIknOpM5DdB/Amvdp9hS++uTWw0DljJqCvLZeDoVlw92bbm095zopZvivNe+GuPDY3H0nb9ca7g9Ket/MYRrvueWcfvPLNGPg+ggKAw+aq23AhFaeeSgnTJigY1SJuRNWe9yG9qGcQ6zN4OjQsioeLKaE6TByMlmeXYWtYHilSgCbQ8eV16GyO7Wj3BxRXIQRFUDFzHzNElD7UHijMCd/FVGUwa9PRMEf76lIQdFlmB8Xw0QSO3Bc0HxRPANldN0lQfKUyehfL45ugbWpK/3VbT8KSxlrUHqoY9PEBdTctm3NN+uhYyNnoTWQRXGsUVH02EMaZYhm0MWh+tiUsImfUvQ4ToXXP4oy55h5XlNyzQ+Uop64m9YiuYGfC0zoBgD2LeaXzICXt5FB9WZ3pdOvGqxTsGI6/Yj0dF7LtvzJ/I2h5Q8UsrfHqtKovCKajLOpmN/uqfgYu/bjOSbG3ZkuTC3pGt7K8F/ljSFP6CSFl4lciXidJRcoMIYyas9aRXa2cm0f6AzY9Vcfy5/8hfd4hHEcpQipSwGCCVoH4wIiq6idJGQ4w=
 before_script:
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
