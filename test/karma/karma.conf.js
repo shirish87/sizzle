@@ -74,7 +74,7 @@ module.exports = function( config ) {
 		// config.LOG_WARN
 		// config.LOG_INFO
 		// config.LOG_DEBUG
-		logLevel: config.LOG_INFO,
+		logLevel: config.LOG_DEBUG,
 
 		// If browser does not capture in given timeout [ms], kill it
 		captureTimeout: 3e5,
