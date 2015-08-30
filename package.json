@@ -66,7 +66,7 @@
   "scripts": {
     "build": "npm install && grunt",
     "start": "grunt start",
-    "test": "grunt browserstack"
+    "test": "grunt test"
   },
   "commitplease": {
     "components": [
