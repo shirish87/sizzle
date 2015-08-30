@@ -97,5 +97,7 @@ module.exports = function( config ) {
 			process.env.TRAVIS_PULL_REQUEST ) {
 			config.browsers.push( "Firefox" );
 		}
+
+		config.singleRun = true;
 	}
 };
