@@ -78,9 +78,9 @@ module.exports = function( config ) {
 		logLevel: config.LOG_INFO,
 
 		// If browser does not capture in given timeout [ms], kill it
-		captureTimeout: 3e5,
-		browserNoActivityTimeout: 3e5,
-		browserDisconnectTimeout: 3e5,
+		captureTimeout: 5e5,
+		browserNoActivityTimeout: 5e5,
+		browserDisconnectTimeout: 5e5,
 		browserDisconnectTolerance: 3
 	});
 
