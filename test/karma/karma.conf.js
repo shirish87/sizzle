@@ -14,7 +14,7 @@ module.exports = function( config ) {
 			// BrowserStack has a limit of 120 requests per minute. The default
 			// "request per second" strategy doesn't scale to so many browsers.
 			pollingTimeout: 10000,
-			startTunnel: false
+			startTunnel: true
 		},
 
 		// Can't specify path as "../../test" which would be intuitive
@@ -75,12 +75,12 @@ module.exports = function( config ) {
 		// config.LOG_WARN
 		// config.LOG_INFO
 		// config.LOG_DEBUG
-		logLevel: config.LOG_INFO,
+		logLevel: config.LOG_DEBUG,
 
 		// If browser does not capture in given timeout [ms], kill it
-		captureTimeout: 5e5,
-		browserNoActivityTimeout: 5e5,
-		browserDisconnectTimeout: 5e5,
+		captureTimeout: 3e5,
+		browserNoActivityTimeout: 3e5,
+		browserDisconnectTimeout: 3e5,
 		browserDisconnectTolerance: 3
 	});
 

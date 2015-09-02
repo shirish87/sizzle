@@ -51,7 +51,7 @@
     "gzip-js": "0.3.2",
     "jquery": "1.9.1",
     "karma": "git://github.com/shirish87/karma.git#debug",
-    "karma-browserstack-launcher": "git://github.com/shirish87/karma-browserstack-launcher.git#debug",
+    "karma-browserstack-launcher": "git://github.com/shirish87/karma-browserstack-launcher.git#ngrok",
     "karma-chrome-launcher": "0.2.0",
     "karma-firefox-launcher": "0.1.6",
     "karma-html2js-preprocessor": "0.1.0",
