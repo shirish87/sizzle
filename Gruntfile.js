@@ -263,7 +263,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( "tests", isBrowserStack ? [
 		"karma:phantom", "karma:desktop",
 
-		"karma:android", //"karma:ios",
+		"karma:ios", "karma:android",
 
 		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
 		"karma:oldSafari", "karma:oldOpera",
