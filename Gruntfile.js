@@ -5,7 +5,11 @@ module.exports = function( grunt ) {
 		isBrowserStack = process.env.BROWSER_STACK_USERNAME && process.env.BROWSER_STACK_ACCESS_KEY,
 		browsers = {
 			phantom: [ "PhantomJS" ],
-			desktop: [],
+                        desktop1: [],
+                        desktop2: [],
+                        desktop3: [],
+                        desktop4: [],
+                        desktop5: [],
 			android: [],
 			ios: [],
 			old: {
@@ -30,22 +34,30 @@ module.exports = function( grunt ) {
 
 		// See https://github.com/jquery/sizzle/wiki/Sizzle-Documentation#browsers
 
-		browsers.desktop = [
-			"bs_chrome-43", "bs_chrome-44",
+                browsers.desktop1 = [
+                        "bs_chrome-43", "bs_chrome-44"
+                ];
 
-			"bs_firefox-31", "bs_firefox-38", // Firefox ESR
-			"bs_firefox-39", "bs_firefox-40",
+                browsers.desktop2 = [
+                        "bs_firefox-31", "bs_firefox-38", // Firefox ESR
+                        "bs_firefox-39", "bs_firefox-40"
+                ];
 
-			"bs_edge",
+                browsers.desktop3 = [
+                        "bs_edge",
 
-			"bs_ie-9", "bs_ie-10", "bs_ie-11",
+                        "bs_ie-9", "bs_ie-10", "bs_ie-11"
+                ];
 
-			"bs_opera-30", "bs_opera-31",
+                browsers.desktop4 = [
+                        "bs_opera-30", "bs_opera-31"
+                ];
 
-			"bs_yandex-14.5",
+                browsers.desktop5 = [
+                        "bs_yandex-14.5",
 
-			"bs_safari-6.0", "bs_safari-6.1", "bs_safari-7.0", "bs_safari-8.0"
-		];
+                        "bs_safari-6.0", "bs_safari-6.1", "bs_safari-7.0", "bs_safari-8.0"
+                ];
 
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0", "bs_ios-8.3" ];
 		browsers.android = [
@@ -184,9 +196,21 @@ module.exports = function( grunt ) {
 			phantom: {
 				browsers: browsers.phantom
 			},
-			desktop: {
-				browsers: browsers.desktop
-			},
+                        desktop1: {
+                                browsers: browsers.desktop1
+                        },
+                        desktop2: {
+                                browsers: browsers.desktop2
+                        },
+                        desktop3: {
+                                browsers: browsers.desktop3
+                        },
+                        desktop4: {
+                                browsers: browsers.desktop4
+                        },
+                        desktop5: {
+                                browsers: browsers.desktop5
+                        },
 			android: {
 				browsers: browsers.android
 			},
@@ -218,7 +242,11 @@ module.exports = function( grunt ) {
 			},
 			all: {
 				browsers: browsers.phantom.concat(
-					browsers.desktop,
+					browsers.desktop1,
+                                        browsers.desktop2,
+                                        browsers.desktop3,
+                                        browsers.desktop4,
+                                        browsers.desktop5,
 					browsers.ios,
 					browsers.android,
 
@@ -263,7 +291,11 @@ module.exports = function( grunt ) {
 	grunt.registerTask( "tests", isBrowserStack ? [
 		"karma:phantom",
 		"karma:ios", "karma:android",
-		"karma:desktop",
+                "karma:desktop1",
+                "karma:desktop2",
+                "karma:desktop3",
+                "karma:desktop4",
+                "karma:desktop5",
 		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
 		"karma:oldSafari", "karma:oldOpera",
 
