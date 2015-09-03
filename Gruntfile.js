@@ -261,10 +261,9 @@ module.exports = function( grunt ) {
 	// Execute tests all browsers in sequential way,
 	// so slow connections would not affect other runs
 	grunt.registerTask( "tests", isBrowserStack ? [
-		"karma:phantom", "karma:desktop",
-
+		"karma:phantom",
 		"karma:ios", "karma:android",
-
+		"karma:desktop",
 		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
 		"karma:oldSafari", "karma:oldOpera",
 
