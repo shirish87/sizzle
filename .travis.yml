@@ -1,11 +1,21 @@
 sudo: false
 language: node_js
 node_js:
-- '0.10'
+    - '0.10'
+
 env:
     global:
         - secure: "cPWNIJAF6f93IFAJBe0s+FX5TkuHPpEUKa3Pwkb0hk66/VVXo27GcehoqyURGTmdhsZWb35weWdFbqxAxnITLTw5xbMbKtlSmZaBXIZJNgN4xPxzJtT3oncnI4LOtnNSm1GHrrBRbZDjKatOaBD0VPfcfJkxf6HxO8/JP+SFnkuhb4JuglGxgktC3EMKv8Q8EVfZvV/zWGSgTOPw/m/SQPDbz48GFQh5rVZWRJL2qUv1cDrs2cbcGMGXAXTTnZ8xNDCdRGakyxCznvS7f/ufYiMXhr1W5KOv+P1Ml0fuj0x2L52SbW8SlXNRiMXa3jArpNq0tiR464CEqT6fd2voyOl+kOFP3R0550k+AjvpKInC2Ysmkcg3uUdPTZr6CrTWxhM1cyZSPPYvb1ZxAbi2aWp4pQ5EM5PjwQW4dmpjdA6H/7f3akC7kcvackapOXI1hHky+d0nuN6fCP8wH6EeGANRmqtBDLiRfd/i3JjDhl1EMkZ5+++rvsyrn3xLRr3HPWQv+nka2aUe+hY12PpnR7WMtwYsY5y2I39mFIScGQ4J9tQ+5EiVQA7+Jc6Qz5GMhbJ8jLGkA0/Htu4+dXqV2/PTr12WEGFG5PLz9DNPXCpoDbfSIOxvbLqV5YUI2SdqWUVASuD70+iHI4X4offlagq6Gnw2a0ulzX7nz6K+6Fk="
         - secure: "Xj0yFXK5cNW5CABJuFH8pJccKRCmNJwVWkOXgWipkREzBiYYdhGMpvQID4zaoou1AEQT8Jf39bTQcLM0/RmPpNiTE/Iowj7GA285l3lWgGsfoyrYWOTEEpZ8NPotb3QVk7XytA7qCZfSCJTbfE9XVZk23OIof9RgbjPrLs+ZornaXD+36/5/msVavkQ5CWt4ADmDhPOV4ABQdalIlawT2zUhoueWdUYTGQkDV7QxlvqCDeIDoSQoNy4ZVDZ99zch8NXJSonvGGTNZQ/wKSDfipV8PIs5ySIMTA7zS78xHjIUYskCB2+f404GQ3cRvDpXzeZgYDRCqsKK6ql1HJai4spca82ZbCnZkDhEVGD9s6SAwbadYvy6nsD68Ha12nM5SZ4Z2LmSIYarh/ChjsIcwADwsHebQmyr1SJlLl+6bv/j+nfvuOjCUsVl32941DNZXpnvxA0D8/YIfjE20c2msN3yXeGOYKggJVUY9D4U7C9Wuq30/QcIGK8vUrCDg9gfB3VaR34Bj7y+5SLVC4AAA0l9Y/EiBgtSOaAUZnMh4Wnq/Cu8C1pgz+/BZsxFeutdVtty7JHsNnAxVGWdTXfkCAb7329I3gH1/h0OeQLaOeFsGoyVeYblP7HPuX5m4reXXudsCfPOQHZwv9IxLiZO2QT5r4zDvmaC+x2DicNFTzM="
+
+before_install:
+    - npm install -g npm
+    - npm --version
+    - wget http://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+    - unzip BrowserStackLocal-linux-x64.zip
+    - ./BrowserStackLocal $BROWSER_STACK_ACCESS_KEY localhost,9876,0 -tunnelIdentifier karma.$(date +%s) -force > /dev/null &
+    - sleep 15
+
 before_script:
     - export DISPLAY=:99.0
     - sh -e /etc/init.d/xvfb start
