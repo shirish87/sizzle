@@ -208,25 +208,29 @@ module.exports = {
 		base: "BrowserStack",
 		device: "iPhone 4S",
 		os: "ios",
-		os_version: "5.1"
+		os_version: "5.1",
+		real_mobile: false
 	},
 	"bs_ios-6.0": {
 		base: "BrowserStack",
 		device: "iPhone 5",
 		os: "ios",
-		os_version: "6.0"
+		os_version: "6.0",
+		real_mobile: false
 	},
 	"bs_ios-7.0": {
 		base: "BrowserStack",
 		device: "iPhone 5S",
 		os: "ios",
-		os_version: "7.0"
+		os_version: "7.0",
+		real_mobile: false
 	},
 	"bs_ios-8.3": {
 		base: "BrowserStack",
 		device: "iPhone 6",
 		os: "ios",
-		os_version: "8.3"
+		os_version: "8.3",
+		real_mobile: false
 	},
 
 	"bs_android-2.3": {
