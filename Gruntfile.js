@@ -5,7 +5,13 @@ module.exports = function( grunt ) {
 		isBrowserStack = process.env.BROWSER_STACK_USERNAME && process.env.BROWSER_STACK_ACCESS_KEY,
 		browsers = {
 			phantom: [ "PhantomJS" ],
-			desktop: [],
+			desktop: {
+				chrome: [],
+				firefox: [],
+				safari: [],
+				ie: [],
+				others: [],
+			},
 			android: [],
 			ios: [],
 			old: {
@@ -30,21 +36,27 @@ module.exports = function( grunt ) {
 
 		// See https://github.com/jquery/sizzle/wiki/Sizzle-Documentation#browsers
 
-		browsers.desktop = [
-			"bs_chrome-43", "bs_chrome-44",
+		browsers.desktop.chrome = [
+			"bs_chrome-43", "bs_chrome-44"
+		];
 
+		browsers.desktop.firefox = [
 			"bs_firefox-31", "bs_firefox-38", // Firefox ESR
-			"bs_firefox-39", "bs_firefox-40",
+			"bs_firefox-39", "bs_firefox-40"
+		];
 
-			"bs_edge",
-
-			"bs_ie-9", "bs_ie-10", "bs_ie-11",
-
-			"bs_opera-30", "bs_opera-31",
-
-			"bs_yandex-14.5",
-
+		browsers.desktop.safari = [
 			"bs_safari-6.0", "bs_safari-6.1", "bs_safari-7.0", "bs_safari-8.0"
+		];
+
+		browsers.desktop.ie = [
+			"bs_edge",
+			"bs_ie-9", "bs_ie-10", "bs_ie-11"
+		];
+
+		browsers.desktop.others = [
+			"bs_opera-30", "bs_opera-31",
+			"bs_yandex-14.5"
 		];
 
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0", "bs_ios-8.3" ];
@@ -184,8 +196,20 @@ module.exports = function( grunt ) {
 			phantom: {
 				browsers: browsers.phantom
 			},
-			desktop: {
-				browsers: browsers.desktop
+			desktopChrome: {
+				browsers: browsers.desktop.chrome
+			},
+			desktopFirefox: {
+				browsers: browsers.desktop.firefox
+			},
+			desktopSafari: {
+				browsers: browsers.desktop.safari
+			},
+			desktopIE: {
+				browsers: browsers.desktop.ie
+			},
+			desktopOthers: {
+				browsers: browsers.desktop.others
 			},
 			android: {
 				browsers: browsers.android
@@ -261,9 +285,15 @@ module.exports = function( grunt ) {
 	// Execute tests all browsers in sequential way,
 	// so slow connections would not affect other runs
 	grunt.registerTask( "tests", isBrowserStack ? [
-		"karma:phantom", "karma:desktop",
+		"karma:phantom",
+		"karma:desktopChrome",
+		"karma:desktopFirefox",
+		"karma:desktopSafari",
+		"karma:desktopIE",
+		"karma:desktopOthers",
 
-		"karma:ios", "karma:android",
+		"karma:android",
+		"karma:ios",
 
 		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
 		"karma:oldSafari", "karma:oldOpera",
