@@ -10,7 +10,7 @@ module.exports = function( grunt ) {
 				firefox: [],
 				safari: [],
 				ie: [],
-				others: [],
+				others: []
 			},
 			android: [],
 			ios: [],
