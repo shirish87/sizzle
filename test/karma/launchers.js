@@ -69,7 +69,7 @@ module.exports = {
 	"bs_edge": {
 		base: "BrowserStack",
 		browser: "edge",
-		browser_version: "0.11",
+		browser_version: "20.0",
 		os: "Windows",
 		os_version: "10"
 	},
