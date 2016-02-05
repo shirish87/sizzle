@@ -13,7 +13,7 @@ module.exports = function( config ) {
 			timeout: 600, // 10 min
 			// BrowserStack has a limit of 120 requests per minute. The default
 			// "request per second" strategy doesn't scale to so many browsers.
-			pollingTimeout: 10000
+			pollingTimeout: 3000
 		},
 
 		// Can't specify path as "../../test" which would be intuitive
