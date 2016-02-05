@@ -50,7 +50,7 @@
     "gzip-js": "0.3.2",
     "jquery": "1.9.1",
     "karma": "0.12.24",
-    "karma-browserstack-launcher": "0.1.4",
+    "karma-browserstack-launcher": "0.1.9",
     "karma-chrome-launcher": "0.2.0",
     "karma-firefox-launcher": "0.1.6",
     "karma-html2js-preprocessor": "0.1.0",
