@@ -48,6 +48,8 @@ module.exports = function( grunt ) {
 			"bs_safari-6.0", "bs_safari-8.0", "bs_safari-9.0"
 		];
 
+		browsers.ieEdge = [ "bs_ie-9", "bs_ie-10", "bs_ie-11", "bs_edge-12" ],
+
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0", "bs_ios-8.3" ];
 		browsers.android = [
 			"bs_android-4.0", "bs_android-4.1", "bs_android-4.2",
@@ -180,6 +182,9 @@ module.exports = function( grunt ) {
 			phantom: {
 				browsers: browsers.phantom
 			},
+			ieEdge: {
+				browsers: browsers.ieEdge
+			},
 			desktop: {
 				browsers: browsers.desktop
 			},
@@ -257,12 +262,12 @@ module.exports = function( grunt ) {
 	// Execute tests all browsers in sequential way,
 	// so slow connections would not affect other runs
 	grunt.registerTask( "tests", isBrowserStack ? [
-		"karma:phantom", "karma:desktop",
+		"karma:phantom", "karma:ieEdge", // "karma:desktop",
 
-		"karma:ios",
+		// "karma:ios",
 
-		"karma:oldIe", "karma:oldFirefox", "karma:oldChrome",
-		"karma:oldSafari", "karma:oldOpera"
+		"karma:oldIe" // "karma:oldFirefox", "karma:oldChrome",
+		// "karma:oldSafari", "karma:oldOpera"
 
 		// See #314 :-(
 		// "karma:android", "karma:oldAndroid"
