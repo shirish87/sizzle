@@ -48,7 +48,7 @@ module.exports = function( grunt ) {
 			"bs_safari-6.0", "bs_safari-8.0", "bs_safari-9.0"
 		];
 
-		browsers.ieEdge = [ "bs_ie-9", "bs_ie-10", "bs_ie-11", "bs_edge-12" ],
+		browsers.ieEdge = [ "bs_ie-9", "bs_ie-10", "bs_ie-11", "bs_edge-12", "bs_edge-13" ],
 
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0", "bs_ios-8.3" ];
 		browsers.android = [

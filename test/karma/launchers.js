@@ -74,6 +74,14 @@ module.exports = {
 		os_version: "10"
 	},
 
+        "bs_edge-13": {
+                base: "BrowserStack",
+                browser: "edge",
+                browser_version: "13.0",
+                os: "Windows",
+                os_version: "10"
+        },
+
 	"bs_ie-6": {
 		base: "BrowserStack",
 		browser: "ie",
