@@ -96,6 +96,13 @@ module.exports = {
 		os: "Windows",
 		os_version: "XP"
 	},
+        "bs_winxp_ie-8": {
+                base: "BrowserStack",
+                browser: "ie",
+                browser_version: "8.0",
+                os: "Windows",
+                os_version: "XP"
+        },
 	"bs_ie-8": {
 		base: "BrowserStack",
 		browser: "ie",
@@ -115,16 +122,50 @@ module.exports = {
 		browser: "ie",
 		browser_version: "10.0",
 		os: "Windows",
+		os_version: "7"
+	},
+	"bs_win8_ie-10": {
+		base: "BrowserStack",
+		browser: "ie",
+		browser_version: "10",
+		os: "Windows",
 		os_version: "8"
 	},
-	"bs_ie-11": {
+        "bs_win8_ie-10m": {
+                base: "BrowserStack",
+                browser: "ie",
+                browser_version: "10.0 Metro",
+                os: "Windows",
+                os_version: "8"
+        },
+        "bs_win7_ie-11": {
+                base: "BrowserStack",
+                browser: "ie",
+                browser_version: "11.0",
+                os: "Windows",
+                os_version: "7"
+        },
+	"bs_win81_ie-11": {
 		base: "BrowserStack",
 		browser: "ie",
 		browser_version: "11.0",
 		os: "Windows",
 		os_version: "8.1"
 	},
-
+        "bs_win81_ie-11m": {
+                base: "BrowserStack",
+                browser: "ie",
+                browser_version: "11.0 Metro",
+                os: "Windows",
+                os_version: "8.1"
+        },
+        "bs_win10_ie-11": {
+                base: "BrowserStack",
+                browser: "ie",
+                browser_version: "11.0",
+                os: "Windows",
+                os_version: "10"
+        },
 	"bs_opera-11.6": {
 		base: "BrowserStack",
 		browser: "opera",

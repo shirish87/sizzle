@@ -48,7 +48,7 @@ module.exports = function( grunt ) {
 			"bs_safari-6.0", "bs_safari-8.0", "bs_safari-9.0"
 		];
 
-		browsers.ieEdge = [ "bs_ie-9", "bs_ie-10", "bs_ie-11", "bs_edge-12", "bs_edge-13" ],
+		browsers.ieEdge = [ "bs_ie-9", "bs_ie-10", "bs_win8_ie-10", "bs_win8_ie-10m", "bs_win7_ie-11", "bs_win81_ie-11", "bs_win81_ie-11m", "bs_win10_ie-11", "bs_edge-12", "bs_edge-13" ],
 
 		browsers.ios = [ "bs_ios-5.1", "bs_ios-6.0", "bs_ios-7.0", "bs_ios-8.3" ];
 		browsers.android = [
@@ -60,7 +60,7 @@ module.exports = function( grunt ) {
 			firefox: [ "bs_firefox-3.6" ],
 			chrome: [ "bs_chrome-16", "bs_chrome-24" ],
 			safari: [ "bs_safari-4.0", "bs_safari-5.0", "bs_safari-5.1" ],
-			ie: [ "bs_ie-6", "bs_ie-7", "bs_ie-8" ],
+			ie: [ "bs_ie-6", "bs_ie-7", "bs_winxp_ie-8", "bs_ie-8" ],
 			opera: [ "bs_opera-11.6", "bs_opera-12.16" ],
 			android: [ "bs_android-2.3" ]
 		};
